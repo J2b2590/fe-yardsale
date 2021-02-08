@@ -14,9 +14,8 @@ class ItemContainer extends Component {
     return (
       <div>
         {items.map((item) => {
-          return <h1>map</h1>;
+          return <ItemDashboard key={item.key} {...item} />;
         })}
-        <ItemDashboard />
       </div>
     );
   }

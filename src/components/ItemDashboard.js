@@ -6,7 +6,13 @@ class ItemDashboard extends Component {
     this.state = {};
   }
   render() {
-    return <div>ItemDashboard</div>;
+    console.log(this.props, "item Dash");
+    return (
+      <div>
+        <h3>{this.props.name}</h3>
+        <p>{this.props.price}</p>
+      </div>
+    );
   }
 }
 
