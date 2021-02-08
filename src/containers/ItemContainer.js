@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import ItemDashboard from "../components/ItemDashboard";
 
 class ItemContainer extends Component {
   constructor(props) {
@@ -7,8 +8,17 @@ class ItemContainer extends Component {
     this.state = {};
   }
   render() {
-    console.log(this.props, "itemContainer");
-    return <div>items</div>;
+    // console.log(this.props, "itemContainer");
+    let items = this.props.items;
+    console.log(items);
+    return (
+      <div>
+        {items.map((item) => {
+          return <h1>map</h1>;
+        })}
+        <ItemDashboard />
+      </div>
+    );
   }
 }
 
