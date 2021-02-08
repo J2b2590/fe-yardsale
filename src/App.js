@@ -1,7 +1,12 @@
 import React, { Component } from "react";
 import "./App.css";
 
-const API = "localhost:3000";
+import { Route, Switch } from "react-router-dom";
+
+import ItemContainer from "./containers/ItemContainer";
+
+const API = "http://localhost:3000/users";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -15,8 +20,13 @@ class App extends Component {
         console.log(data);
       });
   }
+
   render() {
-    return <div>New</div>;
+    return (
+      <Switch>
+        <Route component={ItemContainer} path="/items" />
+      </Switch>
+    );
   }
 }
 
