@@ -7,8 +7,8 @@ import { connect } from "react-redux";
 import { allItems } from "./actions/items";
 
 import ItemContainer from "./containers/ItemContainer";
+import ItemShow from "./components/ItemShow";
 import Login from "./components/Login";
-
 
 const API = "http://localhost:3000/items";
 
@@ -37,6 +37,7 @@ class App extends Component {
     return (
       <Switch>
         <Route component={Login} exact path="/" />
+        <Route component={ItemShow} exact path="/items/show/:id" />
         <Route
           path="/items"
           render={(props) => {
