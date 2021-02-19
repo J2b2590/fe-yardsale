@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Button, Card } from "semantic-ui-react";
 
 class ItemDashboard extends Component {
   constructor(props) {
@@ -8,10 +9,31 @@ class ItemDashboard extends Component {
   render() {
     console.log(this.props, "item Dash");
     return (
-      <div>
-        <h3>{this.props.name}</h3>
-        <p>{this.props.price}</p>
-      </div>
+      // <div>
+      //   <h3>{this.props.name}</h3>
+      //   <p>{this.props.price}</p>
+      // </div>
+      <Card.Group>
+        <Card>
+          <Card.Content>
+            <Card.Header>{this.props.name}</Card.Header>
+
+            <Card.Description>
+              price of item {this.props.price}
+            </Card.Description>
+          </Card.Content>
+          <Card.Content extra>
+            <div className="ui two buttons">
+              <Button basic color="green">
+                Approve
+              </Button>
+              <Button basic color="red">
+                Decline
+              </Button>
+            </div>
+          </Card.Content>
+        </Card>
+      </Card.Group>
     );
   }
 }
