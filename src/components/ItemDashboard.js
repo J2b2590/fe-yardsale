@@ -25,10 +25,10 @@ class ItemDashboard extends Component {
           <Card.Content extra>
             <div className="ui two buttons">
               <Button basic color="green">
-                Approve
+                Like
               </Button>
               <Button basic color="red">
-                Decline
+                Show
               </Button>
             </div>
           </Card.Content>

@@ -5,6 +5,7 @@ import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
 import ItemContainer from "./containers/ItemContainer";
+import Login from "./components/Login";
 
 const API = "http://localhost:3000/items";
 
@@ -28,8 +29,10 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <Switch>
+        <Route component={Login} exact path="/" />
         <Route
           path="/items"
           render={(props) => {
@@ -41,4 +44,4 @@ class App extends Component {
   }
 }
 
-export default connect(null)(App);
+export default App;
