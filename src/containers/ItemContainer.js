@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import ItemDashboard from "../components/ItemDashboard";
+import { withRouter } from "react-router-dom";
 
 class ItemContainer extends Component {
   constructor(props) {
@@ -33,4 +34,4 @@ const mapState = (storeState) => {
   };
 };
 
-export default connect(mapState, null)(ItemContainer);
+export default withRouter(connect(mapState, null)(ItemContainer));
