@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { allItems } from "./actions/items";
@@ -47,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, { allItems })(App);
+export default withRouter(connect(null, { allItems })(App));

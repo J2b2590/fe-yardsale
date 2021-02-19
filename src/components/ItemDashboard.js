@@ -27,7 +27,13 @@ class ItemDashboard extends Component {
               <Button basic color="green">
                 Like
               </Button>
-              <Button basic color="red">
+              <Button
+                basic
+                color="red"
+                onClick={() => {
+                  this.props.history.push(`/items/${this.props.id}`);
+                }}
+              >
                 Show
               </Button>
             </div>
