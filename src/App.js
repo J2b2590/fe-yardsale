@@ -4,6 +4,8 @@ import "./App.css";
 import { Route, Switch } from "react-router-dom";
 import { connect } from "react-redux";
 
+import { allItems } from "./actions/items";
+
 import ItemContainer from "./containers/ItemContainer";
 import Login from "./components/Login";
 
@@ -24,6 +26,7 @@ class App extends Component {
         this.setState({
           items: data,
         });
+        this.props.allItems(data);
         console.log(data);
       });
   }
@@ -44,4 +47,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect(null, { allItems })(App);
