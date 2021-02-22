@@ -1,12 +1,33 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 
+import { login } from "../actions/login";
+
+// const API = "http://localhost:3000/users";
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
+      name: "",
     };
   }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const reqObj = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(this.state),
+    };
+
+    fetch("http://localhost:3000/users", reqObj)
+      .then((resp) => resp.json())
+      .then((data) => {
+        console.log(data);
+      });
+  };
 
   handleChange = (e) => {
     console.log(e.target.value);
@@ -19,18 +40,19 @@ class Login extends Component {
     return (
       <div>
         THIS IS LOGIN
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <input
             type="text"
-            name="username"
-            placeholder="username sign in"
-            value={this.props.username}
+            name="name"
+            placeholder="name sign in"
+            value={this.state.name}
             onChange={(e) => this.handleChange(e)}
           />
+          <button type="submit">Login</button>
         </form>
       </div>
     );
   }
 }
 
-export default Login;
+export default connect(null, { login })(Login);

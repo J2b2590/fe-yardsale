@@ -5,5 +5,5 @@ import manageLogin from "./manageLogin";
 
 export default combineReducers({
   item: manageItems,
-  login: manageLogin,
+  user: manageLogin,
 });
