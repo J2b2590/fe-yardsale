@@ -26,7 +26,12 @@ class Login extends Component {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
+        this.props.login(data);
+        this.props.history.push("/items");
       });
+    this.setState({
+      name: " ",
+    });
   };
 
   handleChange = (e) => {
