@@ -4,3 +4,10 @@ export const allItems = (items) => {
     items,
   };
 };
+
+export const caputured = (item) => {
+  return {
+    type: "CAPUTRED",
+    item,
+  };
+};
