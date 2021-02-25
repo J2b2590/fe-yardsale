@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import Username from "../components/Username"
 import ItemDashboard from "../components/ItemDashboard";
 import { withRouter } from "react-router-dom";
 
@@ -14,15 +15,18 @@ class ItemContainer extends Component {
     // console.log(items);
     return (
       <div>
-        {items.map((item) => {
-          return (
-            <ItemDashboard
-              key={item.key}
-              history={this.props.history}
-              {...item}
-            />
-          );
-        })}
+        <Username />
+        <div>
+          {items.map((item) => {
+            return (
+              <ItemDashboard
+                key={item.key}
+                history={this.props.history}
+                {...item}
+              />
+            );
+          })}
+        </div>
       </div>
     );
   }
