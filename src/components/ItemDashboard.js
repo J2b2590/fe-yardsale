@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { captured } from "../actions/items";
 import { Button, Card } from "semantic-ui-react";
 
 class ItemDashboard extends Component {
@@ -9,7 +10,7 @@ class ItemDashboard extends Component {
   }
 
   render() {
-    console.log(this.props, "item Dash");
+    // console.log(this.props.item, "item Dash");
     return (
       <div>
         <Card.Group>
@@ -30,6 +31,7 @@ class ItemDashboard extends Component {
                   basic
                   color="red"
                   onClick={() => {
+                    this.props.captured(this.props);
                     this.props.history.push(`/items/show/${this.props.id}`);
                   }}
                 >
@@ -50,4 +52,4 @@ const mapStateProps = (state) => {
   };
 };
 
-export default connect(mapStateProps)(ItemDashboard);
+export default connect(mapStateProps, { captured })(ItemDashboard);

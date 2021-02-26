@@ -5,9 +5,9 @@ export const allItems = (items) => {
   };
 };
 
-export const caputured = (item) => {
+export const captured = (item) => {
   return {
-    type: "CAPUTRED",
+    type: "CAPTURED",
     item,
   };
 };

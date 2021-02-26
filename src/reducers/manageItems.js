@@ -3,9 +3,6 @@ export default function manageItems(state = [], action) {
     case "ALL_ITEMS":
       return action.items;
 
-    case "CAPTURED":
-      return action.item;
-
     default:
       return state;
   }
