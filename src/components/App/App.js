@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./styles.scss";
 
 import { Route, Switch, withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 
-import { allItems } from "./actions/items";
+import { allItems } from "../../actions/items";
 
-import ItemContainer from "./containers/ItemContainer";
-import ItemShow from "./components/ItemShow";
-import Login from "./components/Login";
-import Operator from "./components/Operator";
+import ItemContainer from "../../containers/ItemContainer";
+import ItemShow from "../ItemShow";
+import Login from "../Login";
+import Operator from "../Operator";
 
 const API = "http://localhost:3000/items";
 
@@ -37,7 +37,7 @@ class App extends Component {
     console.log(this.props);
     return (
       <Switch>
-        <Route component={Operator} exact path="/" />
+        <Route component={Login} exact path="/" />
         <Route component={ItemShow} exact path="/items/show/:id" />
         <Route
           path="/items"
