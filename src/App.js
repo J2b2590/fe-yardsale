@@ -9,6 +9,7 @@ import { allItems } from "./actions/items";
 import ItemContainer from "./containers/ItemContainer";
 import ItemShow from "./components/ItemShow";
 import Login from "./components/Login";
+import Operator from "./components/Operator";
 
 const API = "http://localhost:3000/items";
 
@@ -36,7 +37,7 @@ class App extends Component {
     console.log(this.props);
     return (
       <Switch>
-        <Route component={Login} exact path="/" />
+        <Route component={Operator} exact path="/" />
         <Route component={ItemShow} exact path="/items/show/:id" />
         <Route
           path="/items"
