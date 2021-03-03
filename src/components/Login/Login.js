@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-
-import { login } from "../actions/login";
+import styles from "./styles.scss";
+import { login } from "../../actions/login";
 
 // const API = "http://localhost:3000/users";
 class Login extends Component {
@@ -44,7 +44,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        THIS IS LOGIN
+        <h1>THIS IS LOGIN</h1>
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
