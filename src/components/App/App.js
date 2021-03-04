@@ -9,7 +9,7 @@ import { allItems } from "../../actions/items";
 import ItemContainer from "../../containers/ItemContainer";
 import ItemShow from "../ItemShow";
 import Login from "../Login/Login";
-import Operator from "../Operator";
+// import Operator from "../Operator";
 
 const API = "http://localhost:3000/items";
 
