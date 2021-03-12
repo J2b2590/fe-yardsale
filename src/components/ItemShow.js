@@ -29,7 +29,7 @@ class ItemShow extends Component {
                 <Card.Content extra>
                   <div className="ui two buttons">
                     <Button basic color="green">
-                      Like
+                      FAV
                     </Button>
                     <Button
                       basic
@@ -45,6 +45,15 @@ class ItemShow extends Component {
               </Card>
             </Card.Group>
           ) : null}
+          <Button
+            basic
+            color="red"
+            onClick={() => {
+              this.props.history.push(`/items`);
+            }}
+          >
+            Back
+          </Button>
         </div>
       </div>
     );
