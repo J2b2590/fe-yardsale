@@ -27,7 +27,7 @@ class Login extends Component {
       .then((data) => {
         console.log(data);
         this.props.login(data);
-        this.props.history.push("/items");
+        this.props.history.push("/yardsales");
       });
     this.setState({
       name: " ",
