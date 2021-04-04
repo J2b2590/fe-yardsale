@@ -45,6 +45,9 @@ class Login extends Component {
   render() {
     return (
       <div class="loginForm">
+        <div class="yardSaleHeader">
+          <h1>Welcome To Yardsale</h1>
+        </div>
         <Grid className="login" centered>
           <Grid.Column>
             <Form onSubmit={this.handleSubmit}>
