@@ -82,7 +82,7 @@ class Login extends Component {
           </Grid>
         </div> */}
 
-        <div>
+        <div class="login">
           <h1>THIS IS LOGIN</h1>
           <h4>Put your name in</h4>
           <form onSubmit={this.handleSubmit}>
