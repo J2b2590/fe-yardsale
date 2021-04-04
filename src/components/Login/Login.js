@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import styles from "./styles.scss";
 import { login } from "../../actions/login";
+import { Card, Form, Button, Grid } from "semantic-ui-react";
 
 // const API = "http://localhost:3000/users";
 class Login extends Component {
@@ -44,18 +45,57 @@ class Login extends Component {
   render() {
     return (
       <div class="loginForm">
-        <h1>THIS IS LOGIN</h1>
-        <h4>Put your name in</h4>
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="name sign in"
-            value={this.state.name}
-            onChange={(e) => this.handleChange(e)}
-          />
-          <button type="submit">Login</button>
-        </form>
+        {/* <div>
+          <h1 style={{ margin: "auto", marginTop: "10%", textAlign: "center" }}>
+            WELCOME TO FLATNOTE
+          </h1>
+          <h4
+            style={{
+              margin: "auto",
+              marginTop: "2%",
+              textAlign: "center",
+              color: "silver",
+            }}
+          >
+            the flatest of notes
+          </h4>
+          <Grid
+            centered
+            style={{ margin: "auto", width: "25%", marginTop: "10%" }}
+          >
+            <Grid.Column>
+              <Form onSubmit={this.handleSubmit}>
+                <Form.Field>
+                  <label>Username</label>
+                  <input
+                    type="text"
+                    name="username"
+                    placeholder="SIGN IN"
+                    onChange={(event) => this.handleChange(event)}
+                    value={this.state.name}
+                  />
+                </Form.Field>
+
+                <Button type="submit">Submit</Button>
+              </Form>
+            </Grid.Column>
+          </Grid>
+        </div> */}
+
+        <div>
+          <h1>THIS IS LOGIN</h1>
+          <h4>Put your name in</h4>
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="text"
+              name="name"
+              placeholder="name sign in"
+              value={this.state.name}
+              onChange={(e) => this.handleChange(e)}
+            />
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
     );
   }

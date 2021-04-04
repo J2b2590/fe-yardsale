@@ -1,9 +1,9 @@
 @import "../../utilities/_colors";
 
-body {
-  background-color: $light-green;
-}
-
-.loginForm :is(h1, h4) {
-  color: yellow;
+.loginForm {
+  margin: auto;
+  margin-top: 10%;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
 }
